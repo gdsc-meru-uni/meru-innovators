@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const RSVPCard = () => {
   return (
     <div>
-      <div className="w-full overflow-hidden rounded-2xl bg-base-100 shadow-xl">
+      <div className="w-full overflow-hidden rounded-2xl bg-white shadow-xl">
         <figure>
           <img src={image} alt="tech-event-image" loading="lazy" />
           <figcaption className="hidden">Tech-Event Image</figcaption>
