@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import Navbar from '../../components/navbar';
 import RSVPCard from './components/rsvpcard';
-import PartnerCard from './components/PartnerCard';
+import PartnerCard from './components/partnerCard';
 import TestimonialCard from './components/testimonialCard';
 import BlogCard from './components/blogCard';
 import BorderComponent from './components/border';
