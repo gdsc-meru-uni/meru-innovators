@@ -18,10 +18,10 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route index path="/" element={<Homepage />} />
-      <Route index path="/communities" element={<Communities />} errorElement={<NotFound />} />
-      <Route index path="/events" element={<Events />} errorElement={<NotFound />} />
-      <Route index path="/blogs" element={<Blogs />} errorElement={<NotFound />} />
-      <Route index path="/*" element={<NotFound />} />
+      <Route path="/communities" element={<Communities />} errorElement={<NotFound />} />
+      <Route path="/events" element={<Events />} errorElement={<NotFound />} />
+      <Route path="/blogs" element={<Blogs />} errorElement={<NotFound />} />
+      <Route path="/*" element={<NotFound />} />
     </Route>
   )
 );
