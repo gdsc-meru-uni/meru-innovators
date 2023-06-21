@@ -7,6 +7,17 @@ import logo from '../assets/brand/logo.svg';
 const Navbar = () => {
   const [show, setShow] = useState(false);
 
+  const links = [
+    { label: 'About Us', href: '/' },
+    { label: 'Communities', href: '/communities' },
+    { label: 'Events', href: '/events' },
+    { label: 'Updates', href: '/updates' },
+    { label: 'Alumni', href: '/alumni' },
+    { label: 'Testimonials', href: '/testimonials' },
+    { label: 'Blog', href: '/blogs' },
+    { label: 'Support', href: '/support' }
+  ];
+
   return (
     <>
       <div className="flex items-center justify-between">
@@ -21,7 +32,7 @@ const Navbar = () => {
         <nav>
           <ul className="flex items-center gap-4 sm:gap-8">
             <li>
-              <Link to="/login">
+              <Link to="/signup">
                 <span className="flex items-center gap-2">
                   <VscAccount size={30} className="text-maroon " />
                   <span className="block text-lg text-white sm:text-xl">Login</span>
@@ -36,33 +47,14 @@ const Navbar = () => {
       </div>
       {show && (
         <div className="absolute right-0 top-16">
-          <div className="w-[250px] rounded-xl border border-white bg-white sm:w-[350px]">
+          <div className="w-[300px] rounded-xl border border-white bg-white sm:w-[350px]">
             <div className="p-4">
               <ul className="flex flex-col gap-6 text-xl">
-                <li>
-                  <Link to="/">About Us</Link>
-                </li>
-                <li>
-                  <Link to="/communities">Communities</Link>
-                </li>
-                <li>
-                  <Link to="/">Events</Link>
-                </li>
-                <li>
-                  <Link to="/">Updates</Link>
-                </li>
-                <li>
-                  <Link to="/">Alumni</Link>
-                </li>
-                <li>
-                  <Link to="/">Testimonials</Link>
-                </li>
-                <li>
-                  <Link to="/">Blog</Link>
-                </li>
-                <li>
-                  <Link>Support</Link>
-                </li>
+                {links?.map((link) => (
+                  <li key={link.label}>
+                    <Link to={link.href}>{link.label}</Link>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>

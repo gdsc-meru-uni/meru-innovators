@@ -11,8 +11,7 @@ import aboutImage from '../../assets/images/group-1.jpg';
 const Homepage = () => {
   return (
     <>
-      <header className="header relative mb-12 bg-hero-bg bg-cover bg-top bg-no-repeat px-3 py-4">
-        {/*before:bg-black before:absolute before:left-0 before:top-0 before:h-full before:w-full before:opacity-90  */}
+      <header className="header relative mb-12 bg-cover bg-top bg-no-repeat px-3 py-4">
         <div className="container relative">
           <Navbar />
           <section className="flex items-center justify-start py-20">
