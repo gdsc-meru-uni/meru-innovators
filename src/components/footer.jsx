@@ -4,6 +4,15 @@ import { AiOutlineMail } from 'react-icons/ai';
 import logo from '../assets/brand/logo.svg';
 
 const Footer = () => {
+  const links = [
+    { label: 'Communities', href: '/communities' },
+    { label: 'Upcoming Events', href: '/events' },
+    { label: 'Executive Leaders', href: '/executive-leaders' },
+    { label: 'Alumni', href: '/alumni' },
+    { label: 'Blog', href: '/blogs' },
+    { label: 'Support', href: '/support' }
+  ];
+
   return (
     <footer className="my-12">
       <div className="container px-3">
@@ -11,7 +20,12 @@ const Footer = () => {
           <section className="flex flex-col gap-16">
             <Link to="/">
               <div className="flex items-center gap-4">
-                <img src={logo} className="w-full max-w-[60px]" alt="meru-innovation-club-logo" />
+                <img
+                  src={logo}
+                  className="w-full max-w-[60px]"
+                  loading="lazy"
+                  alt="meru-innovation-club-logo"
+                />
                 <span className="text-bold text-xl uppercase text-green sm:block sm:text-2xl">
                   meru innovation club
                 </span>
@@ -32,12 +46,12 @@ const Footer = () => {
               </div>
               <div className="flex flex-col gap-4">
                 <span className="flex items-center gap-3">
-                  <BsTelephone size={25} className="text-maroon" />{' '}
-                  <span className="block text-lg sm:text-xl">0716 162 162</span>
+                  <BsTelephone size={20} className="text-maroon" />{' '}
+                  <span className="block text-sm sm:text-base">+254 716 162 162</span>
                 </span>
                 <span className="flex items-center gap-3">
-                  <AiOutlineMail size={25} className="text-maroon" />{' '}
-                  <span className="block text-lg sm:text-xl">mustinnovators@gmail.com</span>
+                  <AiOutlineMail size={20} className="text-maroon" />{' '}
+                  <span className="block text-sm sm:text-base">mustinnovators@gmail.com</span>
                 </span>
               </div>
             </div>
@@ -45,24 +59,11 @@ const Footer = () => {
           <section>
             <h2 className="mb-6 text-2xl font-bold text-blue sm:text-4xl">Quick Links</h2>
             <ul className="flex flex-col gap-6 text-xl">
-              <li>
-                <Link to="/communities">Communities</Link>
-              </li>
-              <li>
-                <Link to="/events">Upcoming Events</Link>
-              </li>
-              <li>
-                <Link to="/">Executives Leaders</Link>
-              </li>
-              <li>
-                <Link to="/">Alumni</Link>
-              </li>
-              <li>
-                <Link to="/blogs">Blogs</Link>
-              </li>
-              <li>
-                <Link>Support</Link>
-              </li>
+              {links?.map((link) => (
+                <li key={link.label} className="text-sm sm:text-base">
+                  <Link to={link.href}>{link.label}</Link>
+                </li>
+              ))}
             </ul>
           </section>
         </div>
