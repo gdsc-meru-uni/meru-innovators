@@ -54,13 +54,15 @@ const Navbar = () => {
         <div className="absolute right-0 top-16">
           <div className="w-[300px] rounded-lg bg-green bg-opacity-70 sm:w-[400px]">
             <div className="p-8">
-              <ul className="flex flex-col gap-6 text-xl text-white ">
-                {links?.map((link) => (
-                  <li key={link.label} className="hover:text-yellow">
-                    <Link to={link.href}>{link.label}</Link>
-                  </li>
-                ))}
-              </ul>
+              <nav>
+                <ul className="flex flex-col gap-6 text-xl text-white ">
+                  {links?.map((link) => (
+                    <li key={link.label} className="hover:text-yellow">
+                      <Link to={link.href}>{link.label}</Link>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
             </div>
           </div>
         </div>
