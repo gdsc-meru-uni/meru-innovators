@@ -6,13 +6,18 @@ import {
   Route,
   RouterProvider
 } from 'react-router-dom';
-import App from './App.jsx';
-import Homepage from './pages/homepage/homepage.jsx';
-import Communities from './pages/communities/communities.jsx';
-import Events from './pages/events/events.jsx';
-import Blogs from './pages/blogs/blogs.jsx';
-import SignUp from './pages/signup/signup.jsx';
-import NotFound from './components/notfound.jsx';
+import App from './App';
+import Homepage from './pages/homepage/homepage';
+import Communities from './pages/communities/communities';
+import Events from './pages/events/events';
+import Blogs from './pages/blogs/blogs';
+import SignUp from './pages/signup/signup';
+import NotFound from './components/notfound';
+import ExecutiveLeaders from './pages/leaders/executive-leaders';
+import Support from './pages/support/support';
+import Testimonials from './pages/testimonials/testimonials';
+import Alumni from './pages/alumni/alumni';
+import Updates from './pages/updates/updates';
 import './index.css';
 
 const router = createBrowserRouter(
@@ -23,6 +28,11 @@ const router = createBrowserRouter(
       <Route path="/events" element={<Events />} errorElement={<NotFound />} />
       <Route path="/blogs" element={<Blogs />} errorElement={<NotFound />} />
       <Route path="/signup" element={<SignUp />} errorElement={<NotFound />} />
+      <Route path="/support" element={<Support />} errorElement={<NotFound />} />
+      <Route path="/updates" element={<Updates />} errorElement={<NotFound />} />
+      <Route path="/testimonials" element={<Testimonials />} errorElement={<NotFound />} />
+      <Route path="/executive-leaders" element={<ExecutiveLeaders />} errorElement={<NotFound />} />
+      <Route path="/alumni" element={<Alumni />} errorElement={<NotFound />} />
       <Route path="/*" element={<NotFound />} />
     </Route>
   )
