@@ -7,7 +7,11 @@ export default {
         'hero-bg': "url('./src/assets/images/group-2.jpg')"
       },
       container: {
-        center: true
+        center: true,
+        padding: '1rem',
+        screens: {
+          '2xl': '1200px'
+        }
       }
     },
     colors: {
