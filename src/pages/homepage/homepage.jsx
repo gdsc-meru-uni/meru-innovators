@@ -68,7 +68,7 @@ const Homepage = () => {
           </div>
           <div className="mt-10 flex w-full items-center justify-center">
             <Link to="/events">
-              <button className="block w-[300px] rounded-lg bg-blue py-4 text-lg text-white">
+              <button className="block w-[300px] rounded-lg bg-maroon py-4 text-lg text-white">
                 View More Events
               </button>
             </Link>

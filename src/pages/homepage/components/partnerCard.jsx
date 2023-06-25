@@ -1,4 +1,4 @@
-import microsoft from '../../../assets/images/google.png';
+import microsoft from '../../../assets/images/microsoft.png';
 
 const PartnerCard = () => {
   return (
