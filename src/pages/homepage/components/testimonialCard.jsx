@@ -8,7 +8,13 @@ const TestimonialCard = () => {
       <div className="w-full rounded-2xl bg-dark p-4 text-white shadow-xl">
         <div className="flex items-center gap-4">
           <figure>
-            <img src={me} alt="me" className="h-20 w-20 rounded-[50%] object-cover" />
+            <img
+              src={me}
+              alt="me"
+              loading="lazy"
+              className="h-20 w-20 rounded-[50%] object-cover"
+            />
+            <figcaption className="hidden">My Image</figcaption>
           </figure>
           <div>
             <h2 className="mb-1 text-lg font-semibold">Jacob Kyalo</h2>
@@ -16,7 +22,7 @@ const TestimonialCard = () => {
           </div>
         </div>
         <div className="mt-8">
-          <p className="mb-4 text-sm text-grey">
+          <p className="mb-8 text-sm text-grey">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur labore quas minima,
             aut ducimus eos. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur
             labore quas minima, aut ducimus eos.

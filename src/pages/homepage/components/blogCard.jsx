@@ -12,7 +12,13 @@ const BlogCard = () => {
       <div className="p-4">
         <div className="flex items-center gap-4">
           <figure>
-            <img src={me} alt="me" className="h-20 w-20 rounded-[50%] object-cover" />
+            <img
+              src={me}
+              alt="me"
+              loading="lazy"
+              className="h-20 w-20 rounded-[50%] object-cover"
+            />
+            <figcaption className="hidden">Blog card Image</figcaption>
           </figure>
           <div>
             <h2 className="mb-1 text-lg font-semibold">Jacob Kyalo</h2>

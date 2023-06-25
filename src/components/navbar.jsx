@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FiMenu } from 'react-icons/fi';
+import { RxCross1 } from 'react-icons/rx';
 import { VscAccount } from 'react-icons/vsc';
 import logo from '../assets/brand/logo.svg';
 
@@ -34,24 +35,28 @@ const Navbar = () => {
             <li>
               <Link to="/signup">
                 <span className="flex items-center gap-2">
-                  <VscAccount size={30} className="text-maroon " />
+                  <VscAccount size={30} className="text-blue " />
                   <span className="block text-lg text-white sm:text-xl">Login</span>
                 </span>
               </Link>
             </li>
             <li className="cursor-pointer" onClick={() => setShow((prev) => !prev)}>
-              <FiMenu size={30} className="text-white" />
+              {show ? (
+                <RxCross1 size={30} className="text-white" />
+              ) : (
+                <FiMenu size={30} className="text-white" />
+              )}
             </li>
           </ul>
         </nav>
       </div>
       {show && (
         <div className="absolute right-0 top-16">
-          <div className="w-[300px] rounded-xl border border-white bg-white sm:w-[350px]">
-            <div className="p-4">
-              <ul className="flex flex-col gap-6 text-xl">
+          <div className="w-[300px] rounded-lg bg-green bg-opacity-70 sm:w-[400px]">
+            <div className="p-8">
+              <ul className="flex flex-col gap-6 text-xl text-white ">
                 {links?.map((link) => (
-                  <li key={link.label}>
+                  <li key={link.label} className="hover:text-yellow">
                     <Link to={link.href}>{link.label}</Link>
                   </li>
                 ))}

@@ -43,7 +43,7 @@ const Homepage = () => {
                 </p>
                 <div className="mt-10 flex w-full justify-center sm:justify-start">
                   <Link to="/communities">
-                    <button className="text-black block w-[300px] rounded-lg bg-yellow py-6 text-lg">
+                    <button className="text-black block w-[300px] rounded-lg bg-yellow py-4 text-lg">
                       View Communities
                     </button>
                   </Link>
@@ -65,6 +65,13 @@ const Homepage = () => {
               <RSVPCard />
               <RSVPCard />
             </div>
+          </div>
+          <div className="mt-10 flex w-full items-center justify-center">
+            <Link to="/events">
+              <button className="block w-[300px] rounded-lg bg-blue py-4 text-lg text-white">
+                View More Events
+              </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -113,7 +120,7 @@ const Homepage = () => {
           </div>
           <div className="mt-10 flex w-full items-center justify-center">
             <Link to="/blogs">
-              <button className="text-black block w-[300px] rounded-lg bg-yellow py-6 text-lg">
+              <button className="text-black block w-[300px] rounded-lg bg-yellow py-4 text-lg">
                 View More Blogs
               </button>
             </Link>

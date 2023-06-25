@@ -8,7 +8,7 @@ const NotFound = () => {
           404 Page Not Found
         </h1>
         <Link to="/">
-          <button className="block w-[300px] rounded-lg bg-green py-6 text-lg text-white">
+          <button className="block w-[300px] rounded-lg bg-green py-4 text-lg text-white">
             Go Home
           </button>
         </Link>
