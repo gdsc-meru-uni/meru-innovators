@@ -18,6 +18,7 @@ import Support from './pages/support/support';
 import Testimonials from './pages/testimonials/testimonials';
 import Alumni from './pages/alumni/alumni';
 import Updates from './pages/updates/updates';
+import AboutUs from './pages/about/about-us';
 import './index.css';
 
 const router = createBrowserRouter(
@@ -33,6 +34,7 @@ const router = createBrowserRouter(
       <Route path="/testimonials" element={<Testimonials />} errorElement={<NotFound />} />
       <Route path="/executive-leaders" element={<ExecutiveLeaders />} errorElement={<NotFound />} />
       <Route path="/alumni" element={<Alumni />} errorElement={<NotFound />} />
+      <Route path="/about-us" element={<AboutUs />} errorElement={<NotFound />} />
       <Route path="/*" element={<NotFound />} />
     </Route>
   )
