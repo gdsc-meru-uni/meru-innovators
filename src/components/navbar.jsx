@@ -9,7 +9,7 @@ const Navbar = () => {
   const [show, setShow] = useState(false);
 
   const links = [
-    { label: 'About Us', href: '/' },
+    { label: 'About Us', href: '/about-us' },
     { label: 'Communities', href: '/communities' },
     { label: 'Events', href: '/events' },
     { label: 'Updates', href: '/updates' },
@@ -52,7 +52,7 @@ const Navbar = () => {
       </div>
       {show && (
         <div className="absolute right-0 top-16">
-          <div className="w-[300px] rounded-lg bg-green bg-opacity-70 sm:w-[400px]">
+          <div className="w-[300px] rounded-lg bg-green bg-opacity-90 sm:w-[400px]">
             <div className="p-8">
               <nav>
                 <ul className="flex flex-col gap-6 text-xl text-white ">
