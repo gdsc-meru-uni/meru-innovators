@@ -5,7 +5,8 @@ import { RxCross1 } from 'react-icons/rx';
 import { VscAccount } from 'react-icons/vsc';
 import logo from '../assets/brand/logo.svg';
 
-const Navbar = () => {
+// eslint-disable-next-line react/prop-types
+const Navbar = ({ bg }) => {
   const [show, setShow] = useState(false);
 
   const links = [
@@ -25,7 +26,10 @@ const Navbar = () => {
         <Link to="/">
           <div className="flex items-center gap-4">
             <img src={logo} className="w-full max-w-[60px]" alt="meru-innovation-club-logo" />
-            <span className="hidden text-xl uppercase text-white sm:block sm:text-2xl">
+            <span
+              className={`hidden text-xl uppercase ${
+                bg ? 'text-black' : 'text-white'
+              } sm:block sm:text-2xl`}>
               meru innovation club
             </span>
           </div>
@@ -36,22 +40,24 @@ const Navbar = () => {
               <Link to="/signup">
                 <span className="flex items-center gap-2">
                   <VscAccount size={30} className="text-blue " />
-                  <span className="block text-lg text-white sm:text-xl">Login</span>
+                  <span className={`block text-lg ${bg ? 'text-black' : 'text-white'} sm:text-xl`}>
+                    Login
+                  </span>
                 </span>
               </Link>
             </li>
             <li className="cursor-pointer" onClick={() => setShow((prev) => !prev)}>
               {show ? (
-                <RxCross1 size={30} className="text-white" />
+                <RxCross1 size={30} className={`${bg ? 'text-black' : 'text-white'}`} />
               ) : (
-                <FiMenu size={30} className="text-white" />
+                <FiMenu size={30} className={`${bg ? 'text-black' : 'text-white'}`} />
               )}
             </li>
           </ul>
         </nav>
       </div>
       {show && (
-        <div className="absolute right-0 top-16">
+        <div className="absolute right-0 top-20">
           <div className="w-[300px] rounded-lg bg-green bg-opacity-90 sm:w-[400px]">
             <div className="p-8">
               <nav>
